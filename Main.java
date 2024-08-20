@@ -77,7 +77,7 @@ class PartTimeEmployee extends Employee{
 //Now we'll create PayrolSystem to add, remove and display employee,
 //we'll store employees in a list and perform CRUD operations
 class PayrolSystem{
-    ArrayList<Employee> employeeList;
+    private ArrayList<Employee> employeeList;
 
     //we'll declare a constructor, when PayrolSystem object created,
     // an employeeList will be created
@@ -130,3 +130,20 @@ class Main{
         payrolSystem.displayEmployee();
     }
 }
+
+/*Issues faced:
+1. while overriding toString method,faced error while text formatting, String should be placed 
+    within "" and them the variable needed to be appended using + signs 
+
+2. While declaring constructor of child class, all the parameters (own + parent class) should be passed
+    then using super keyword, fetch the parent parameters, super(name, id)
+
+3. In Payrol class, we can create a instance variable of ArrayList type and initialoze it in constructor
+    This list will store Employee objects at its index
+
+4. For git, created a repository and copied the link and did git clone link
+    then copied Main.java inside the cloned folder, then git add filename, git commit and git push
+
+5. We have created a framework using OOPS, next we need to use integrate DBMS to fetch from tables 
+    instead of passing data manually
+*/
